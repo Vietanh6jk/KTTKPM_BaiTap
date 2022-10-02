@@ -3,6 +3,7 @@ package com.jpa.Spring_JPA_Dat_BTVN.service.servicesImpl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.jpa.Spring_JPA_Dat_BTVN.enity.ChuyenBay;
@@ -15,8 +16,8 @@ public class ChuyenBayServiceImpl implements ChuyenBayService {
 	private ChuyenBayRepository chuyenBayRepository;
 
 	@Override
-	public List<ChuyenBay> findChuyenBayByGaDen(String gaDen) {
-		return chuyenBayRepository.findChuyenBayByGaDen(gaDen);
+	public List<ChuyenBay> findByGaDen(String gaden) {
+		return chuyenBayRepository.findByGaDen(gaden);
 	}
 
 	@Override
@@ -25,13 +26,12 @@ public class ChuyenBayServiceImpl implements ChuyenBayService {
 	}
 
 	@Override
-	public List<ChuyenBay> findChuyenBayByGadiAndGaden(String gaDi, String gaDen) {
-		return chuyenBayRepository.findChuyenBayByGaDiAndGaDen(gaDi, gaDen);
+	public List<ChuyenBay> findByGadiAndGaden(String gadi, String gaden) {
+		return chuyenBayRepository.findByGaDiAndGaDen(gadi, gaden);
 	}
-
 	@Override
-	public Integer countChuyenbayByGadi(String gaDi) {
-		return chuyenBayRepository.countChuyenbayByGaDi(gaDi);
+	public Integer countByGaDi(String gadi) {
+		return chuyenBayRepository.countByGaDi(gadi);
 	}
 
 }

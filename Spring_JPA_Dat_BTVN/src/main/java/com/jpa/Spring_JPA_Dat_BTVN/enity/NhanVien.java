@@ -8,20 +8,21 @@ import javax.persistence.Table;
 import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.Entity ;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @DynamicUpdate
 @Entity
-@Setter
-@Getter
+@Data
 @Table(name="nhanvien")
 public class NhanVien {
 	@Id
 	@GeneratedValue
+	@Column(name="manv")
 	private String maNV;
-	@Column
+	@Column(name="ten")
 	private String ten;
-	@Column
+	@Column(name="luong")
 	private String luong;
 }

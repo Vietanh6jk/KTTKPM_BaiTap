@@ -23,8 +23,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class ChuyenBay {
 	

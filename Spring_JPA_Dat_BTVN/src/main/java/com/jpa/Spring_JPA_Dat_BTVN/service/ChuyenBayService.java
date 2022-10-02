@@ -8,8 +8,8 @@ import com.jpa.Spring_JPA_Dat_BTVN.enity.ChuyenBay;
 
 @Service
 public interface ChuyenBayService {
-	public List<ChuyenBay> findChuyenBayByGaDen(String gaDen);
+	public List<ChuyenBay> findByGaDen(String gaden);
 	public List<ChuyenBay> findChuyenBayByDoDai(int minDoDai, int maxDoDai);
-    public List<ChuyenBay> findChuyenBayByGadiAndGaden(String gaDi, String gaDen);
-    public Integer countChuyenbayByGadi(String gaDi);
+    public List<ChuyenBay> findByGadiAndGaden(String gadi, String gaden);
+    public Integer countByGaDi(String gadi);
 }
